@@ -1,0 +1,37 @@
+Plack/Middleware/TweakEnv version 0.10
+========================================
+
+This library's module, Plack::Middleware::TweakEnv, provides a Plack
+middleware that can swap `$env` variables. For example, if `$env` includes a
+`HTTP_X_FORWARDED_SCRIPT_NAME` variable set up by a proxy server, and you want
+it to be used instead of `SCRIPT_NAME`, you can tell this module to replace
+`SCRIPT_NAME`'s value with the value of `HTTP_X_FORWARDED_SCRIPT_NAME`.
+
+INSTALLATION
+
+To install this module, type the following:
+
+    perl Build.PL
+    ./Build
+    ./Build test
+    ./Build install
+
+Or, if you don't have Module::Build installed, type the following:
+
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+Dependencies
+------------
+
+Plack::Middleware::TweakEnv requires Plack 0.9929 or higher.
+
+Copyright and Licence
+---------------------
+
+Copyright (c) 2010 David E. Wheeler. Some Rights Reserved.
+
+This module is free software; you can redistribute it and/or modify it under
+the same terms as Perl itself.
