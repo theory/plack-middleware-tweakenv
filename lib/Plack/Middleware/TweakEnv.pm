@@ -29,7 +29,6 @@ sub wrap {
             $code = $self->can($val) or croak "No such method: $val";
             $val = [];
         } else {
-            require Carp;
             croak("$val is not a valid parameter to " . __PACKAGE__);
         }
         push @tweaks, [ $code, [ $key, @{ $val } ] ];
@@ -255,8 +254,8 @@ environment settings.
 =head1 Support
 
 This module is stored in an open L<GitHub
-repository|http://github.com/theory/test-xpath/tree/>. Feel free to fork and
-contribute!
+repository|http://github.com/theory/plack-middleware-tweakenv/tree/>. Feel
+free to fork and contribute!
 
 Please file bug reports via L<GitHub
 Issues|http://github.com/theory/plack-middleware-tweakenv/issues/> or by sending mail to
